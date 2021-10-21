@@ -123,8 +123,9 @@ section.logo > span {
 }
 
 .email {
-  color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   background: #2c344b;
+  outline: none;
 }
 
 .submit {
@@ -141,6 +142,18 @@ section.logo > span {
   width: 14rem;
   height: 6rem;
   position: absolute;
+}
+
+.error-email {
+  color: #fb3e3e;
+  display: none;
+  margin-left: 1.9rem;
+}
+
+.has-error-email {
+  color: #fb3e3e;
+  display: block;
+  margin-left: 1.9rem;
 }
 
 @media screen and (min-width: 375px) and (max-width: 768px) {

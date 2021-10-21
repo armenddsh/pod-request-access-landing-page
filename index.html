@@ -40,9 +40,10 @@
         <img src="./assets/desktop/pocket-casts.svg" alt="Pocket">
       </section>
       <section class="form">
-        <form method="POST" action="#" id="request-access" autocomplete="off">
-          <input name="email" class="control email" type="email" placeholder="Email address">
+        <form method="POST" action="#" id="request-access" autocomplete="off" novalidate>
           <button class="control submit" type="submit">Request access</button>
+          <input name="email" id="email" class="control email" type="email" placeholder="Email address" required>
+          <span id="error-email" class="error-email">Oops! Please check your email</span>
         </form>
       </section>
       <section class="footer">
@@ -50,6 +51,23 @@
       </section>
     </div>
   </div>
+  <script>
+    const form = document.getElementById('request-access');
+    const email = document.getElementById('email');
+    const emailError = document.getElementById('error-email');
+
+    form.addEventListener('submit', function (e) {
+      const isValid = email.checkValidity();
+
+      if (!isValid) {
+        emailError.classList.add("has-error-email");
+      } else {
+        emailError.classList.remove("has-error-email");
+      }
+
+      e.preventDefault();
+    });
+  </script>
 </body>
 
 </html>
