@@ -38,8 +38,40 @@ section.logo > span {
   margin-top: 3.6rem;
 }
 
+.bg {
+  display: grid;
+}
+
 .content {
   padding: 1.33rem;
+
+  display: grid;
+  grid-template-areas:
+    "title"
+    "description"
+    "companies"
+    "form";
+}
+
+.description {
+  grid-area: description;
+  font-size: 1.3rem;
+  line-height: 1.39rem;
+  color: #c2cbe5;
+  margin-top: 0.89rem;
+  text-align: start;
+}
+
+.description {
+  grid-area: description;
+}
+
+.companies {
+  grid-area: companies;
+}
+
+.form {
+  grid-area: form;
 }
 
 .title {
@@ -102,14 +134,122 @@ section.logo > span {
   margin-top: 1rem;
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
+.footer > span {
+  display: none;
+  background: url("../assets/desktop/bg-pattern-dots.svg");
+  fill: #000;
+}
+
+.footer > span {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: #121725;
+  }
+
+  .bg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .background {
     background: linear-gradient(rgba(18, 23, 37, 0.5), rgba(18, 23, 37, 0.5)),
       url("../assets/desktop/image-host.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     fill: #121725;
-    width: 100vw;
-    height: 100vh;
+    width: 491px;
+    height: 676px;
     padding: 1.33rem;
+    position: relative;
+    background-position: -20rem 0;
   }
+
+  .content {
+    background-color: #121725;
+    margin-top: -15rem;
+    margin-left: 1rem;
+    width: 32rem;
+
+    display: grid;
+    grid-template-areas:
+      "title"
+      "description"
+      "form"
+      "companies";
+  }
+
+  section.logo {
+    align-items: flex-start;
+  }
+
+  section.logo > span {
+    display: block;
+  }
+
+  .title > h2 {
+    font-size: 2.2rem;
+    line-height: 2.11rem;
+    color: #54e6af;
+    text-transform: uppercase;
+    text-align: start;
+  }
+
+  .description {
+    grid-area: description;
+    font-size: 1.3rem;
+    line-height: 1.39rem;
+    color: #c2cbe5;
+    margin-top: 0.89rem;
+    text-align: start;
+  }
+
+  .description {
+    grid-area: description;
+  }
+
+  .companies {
+    grid-area: companies;
+  }
+
+  .form {
+    grid-area: form;
+  }
+
+  #request-access {
+    position: relative;
+  }
+
+  .email {
+    width: 20.6rem;
+  }
+
+  .submit {
+    color: #121725;
+    background: #54e6af;
+    font-weight: bold;
+    position: absolute;
+    top: -13px;
+    right: 9rem;
+    width: 8rem;
+    height: 2rem;
+    padding: 0rem;
+  }
+
+  .footer > span {
+    display: block;
+    background: url(../assets/desktop/bg-pattern-dots.svg) no-repeat;
+    fill: #000;
+    width: 14rem;
+    height: 6rem;
+    position: absolute;
+    left: 3rem;
+    bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  
 }
