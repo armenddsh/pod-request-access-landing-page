@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <div>
+  <div style="overflow: hidden;">
     <div class="bg">
       <section class="logo">
         <span></span>
@@ -41,8 +41,8 @@
       </section>
       <section class="form">
         <form method="POST" action="#" id="request-access" autocomplete="off" novalidate>
-          <button class="control submit" type="submit">Request access</button>
           <input name="email" id="email" class="control email" type="email" placeholder="Email address" required>
+          <button class="control submit" type="submit">Request access</button>
           <span id="error-email" class="error-email">Oops! Please check your email</span>
         </form>
       </section>
