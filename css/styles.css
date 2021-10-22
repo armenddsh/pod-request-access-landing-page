@@ -103,6 +103,7 @@ section.logo > span {
   display: flex;
   justify-content: space-evenly;
   margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .companies > img {
@@ -134,10 +135,6 @@ section.logo > span {
   background: #54e6af;
   font-weight: bold;
   margin-top: 1rem;
-}
-
-.footer {
-  margin-bottom: 1rem;
 }
 
 .footer > span {
