@@ -103,7 +103,7 @@ section.logo > span {
   display: flex;
   justify-content: space-evenly;
   margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem !important;
 }
 
 .companies > img {
