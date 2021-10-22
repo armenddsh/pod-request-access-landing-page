@@ -136,6 +136,10 @@ section.logo > span {
   margin-top: 1rem;
 }
 
+.footer {
+  margin-bottom: 1rem;
+}
+
 .footer > span {
   display: none;
   background: url(../assets/desktop/bg-pattern-dots.svg) no-repeat;
